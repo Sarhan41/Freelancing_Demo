@@ -35,12 +35,12 @@ const MainPage: React.FC = () => {
           Make Your First $10,000
         </h1>
         <p className="text-base lg:text-lg mb-4">
-          Hi, I'm Kyle Howerton. I grew up broke and now earn a consistent
+          Hi, I&apos;m Kyle Howerton. I grew up broke and now earn a consistent
           $50,000+ monthly income. I can teach you how to achieve this too.
         </p>
         <p className="text-base lg:text-lg">
           My #1 goal is to build a community of young entrepreneurs and dream
-          chasers. I share methods that I've used to make money online as a teen
+          chasers. I share methods that I&apos;ve used to make money online as a teen
           using social media, e-commerce, and real estate.
         </p>
       </div>

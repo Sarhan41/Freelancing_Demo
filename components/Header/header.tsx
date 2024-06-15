@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FiMenu } from "react-icons/fi";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const Header = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -44,14 +46,14 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full bg-black shadow-md z-50 px-36 border-b border-gold-500 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full bg-black shadow-md z-50 px-6 lg:px-36 border-b border-gold-500 transition-transform duration-300 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
-      } flex justify-between items-center h-20 px-6`}
+      } flex justify-between items-center h-20`}
     >
       <div className="flex items-center space-x-4">
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center">
-          <div className="overflow-hidden h-full rounded-full border-2 border-gold-500 p-1">
+          <div className="overflow-hidden h-full rounded-full border-2 border-yellow-500 p-1">
             <Image
               src="/H[1].png"
               alt="logo"
@@ -60,67 +62,45 @@ const Header = () => {
               className="rounded-full"
             />
           </div>
-          <div className="ml-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 font-serif hover:scale-105 transform transition-transform duration-300">
-            Kywavyyy
-          </div>
+          <div className="ml-4 text-lg font-bold text-white">Kywavyyy</div>
         </Link>
       </div>
-      <nav
-        className={`${
-          isMobile ? "hidden" : "flex"
-        } space-x-8 mx-auto text-center`}
-      >
-        <Link
-          href="#intro"
-          className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300"
-        >
+      <nav className={`lg:flex lg:space-x-8 mx-auto text-center ${isMobile ? 'hidden' : 'flex space-x-8'}`}>
+        <Link href="#intro" className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300">
           Intro
         </Link>
-        <Link
-          href="/"
-          className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300"
-        >
+        <Link href="/" className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300">
           Exclusive Content
         </Link>
-        <Link
-          href="/"
-          className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300"
-        >
+        <Link href="/" className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300">
           Newsletter
         </Link>
       </nav>
       <div className="flex items-center space-x-4">
         {/* Full name */}
-        <div className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500 font-serif hidden lg:block">
+        <div className="text-lg font-semibold text-white lg:block hidden">
           Kyle Howerton
         </div>
         {/* Mobile Menu Button */}
         <button
-          className="block lg:hidden text-white hover:text-gold-500 transition-colors duration-300"
+          className="block lg:hidden text-white hover:text-yellow-500 transition-colors duration-300"
           onClick={toggleMenu}
         >
-          <FiMenu size={24} />
+       {
+            !isMenuOpen ? <FiMenu size={24} /> : <AiFillCloseCircle size={24} />
+          }
         </button>
       </div>
       {/* Mobile Menu */}
-      {isMobile && isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-black text-center py-4 shadow-lg z-40">
-          <Link
-            href="/"
-            className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300"
-          >
+      {isMobile && (
+        <div className={`fixed top-20 left-0 w-full bg-black text-center py-4 border-b-2 border-b-yellow-400 shadow-lg z-40 ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <Link href="/" className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300">
             Intro
           </Link>
-          <Link
-            href="/"
-            className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300"
-          >
+          <Link href="/" className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300">
             Exclusive Content
           </Link>
-          <Link
-            href="/"
-            className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300"
-          >
+          <Link href="/" className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300">
             Newsletter
           </Link>
         </div>

@@ -21,7 +21,11 @@ export default function RootLayout({
         
         <Header />
           
-          {children}</body>
+        <main className="mt-8 max-md:mt-16">
+          
+            {children}
+          </main>
+            </body>
     </html>
   );
 }

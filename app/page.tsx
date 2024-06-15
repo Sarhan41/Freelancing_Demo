@@ -16,7 +16,8 @@ const MainPage: React.FC = () => {
   }, [videoId]);
 
   return (
-    <main className="flex flex-col items-center justify-center p-4 lg:p-24 bg-black min-h-[80vh]">
+    <main className="flex flex-col items-center justify-center p-4 lg:p-24 bg-black min-h-screen">
+      {/* Video Section */}
       <div className="relative w-full h-[50vh] lg:h-[80vh] max-w-full">
         <div className="absolute inset-0">
           {/* Keep the iframe in the background */}
@@ -30,7 +31,8 @@ const MainPage: React.FC = () => {
           ></iframe>
         </div>
       </div>
-      <div className="relative z-10 text-center text-gray-200 bg-gradient-to-r from-black/60 to-black/40 p-4 lg:p-8 rounded-lg max-w-lg mx-auto mt-8 lg:mt-0">
+      {/* Text Content Section */}
+      <div className="flex flex-col items-center justify-center text-center text-gray-200 bg-gradient-to-r from-black/60 to-black/40 p-4 lg:p-8 rounded-lg max-w-lg mx-auto mt-8 lg:mt-0">
         <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-yellow-500">
           Make Your First $10,000
         </h1>

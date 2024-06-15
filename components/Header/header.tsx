@@ -103,6 +103,7 @@ const Header = () => {
           <Link href="/" className="block py-2 text-lg font-medium text-white hover:text-yellow-500 transition-colors duration-300">
             Newsletter
           </Link>
+          <h1 className="text-lg font-semibold text-white block lg:hidden">Kyle Howerton</h1>
         </div>
       )}
     </header>

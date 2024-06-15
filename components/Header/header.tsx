@@ -62,7 +62,7 @@ const Header = () => {
               className="rounded-full"
             />
           </div>
-          <div className="ml-4 text-lg font-bold text-white">Kywavyyy</div>
+          <div className="ml-4 text-lg font-bold text-white">KyWavyyy</div>
         </Link>
       </div>
       <nav className={`lg:flex lg:space-x-8 mx-auto text-center ${isMobile ? 'hidden' : 'flex space-x-8'}`}>

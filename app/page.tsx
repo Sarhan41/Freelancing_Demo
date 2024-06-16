@@ -31,7 +31,7 @@ const MainPage: React.FC = () => {
           ></iframe>
         </div>
       </div>
-      {/* Text Content Section */}
+      {/* Text Content Section*/}
       <div className="flex flex-col items-center justify-center text-center text-gray-200 bg-gradient-to-r from-black/60 to-black/40 p-4 lg:p-8 rounded-lg max-w-lg mx-auto mt-8 lg:mt-0">
         <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-yellow-500">
           Make Your First $10,000
